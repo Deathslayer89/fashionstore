@@ -26,7 +26,7 @@ const HomeProductCarousel = ({ section, data }) => {
     },
   };
   const items = data.map((item) => (
-    <div className="">
+    <div>
       <ProductCard product={item} />
     </div>
   ));

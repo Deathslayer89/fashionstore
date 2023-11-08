@@ -1,12 +1,12 @@
 import React from 'react';
-
+import './ProductCard.css'
 const ProductCard = ({ product }) => {
-  const { title, brand, imageUrl, price ,discountedPrice,color,discountPersent} = product;
+  const { title, brand, imageUrl, price ,discountedPrice,color,discountPersent,image} = product;
   
   return (
    <div className='productCard w-[15rem] border m-3 transition-all cursor-pointer '>
     <div className='h-[20rem]'>
-        <img className='h-full w-full object-cover object-left-top' src={imageUrl} alt="" />
+        <img className='h-full w-full object-cover object-left-top' src={imageUrl || image} alt="" />
     </div>
     <div className='textPart bg-white p-3 '>
         <div>
