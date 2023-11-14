@@ -1,15 +1,13 @@
+import { Route, Routes } from "react-router-dom";
 import "./App.css";
-import Homepage from "./Pages/Homepage";
-import Footer from "./customer/Components/Footer";
-import Navigation from "./customer/Components/Navigation/Navigation";
+import CustomerRoutes from "./Routes/CustomerRoutes";
 function App() {
+  const isAdmin = true;
   return (
     <div>
-      <Navigation />
-      <div>
-      <Homepage/>
-      </div>
-      <Footer/>
+      <Routes>
+        <Route path="/*" element={<CustomerRoutes />} />
+      </Routes>
     </div>
   );
 }
